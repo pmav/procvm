@@ -2,7 +2,9 @@
 procvm is a linux shell scripts that list VM size, PID and comand for each process.
 
 ### Usage
-	./procvm.sh
+Note: root access is needed.
+	chmod 700 procvm.sh
+	sudo ./procvm.sh
 
 ## Example
 	1       23 MB           init (/sbin/init)
