@@ -1,5 +1,5 @@
 # procvm
-procvm is a linux shell scripts that list VM size, PID and comand for each process.
+procvm is a linux shell script that list VM size (from `/proc/<pid>`), PID and comand for each process.
 
 ### Usage
 Note: root access is needed.
