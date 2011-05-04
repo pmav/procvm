@@ -13,7 +13,7 @@ for process in `ls -m /proc/ | cut --delimiter=',' --fields=1- | grep '^[0-9]' |
                
                if [ `expr length "$vmsize"` -gt 0 ]; then
 
-			           name=`cat /proc/$process/status | grep Name`
+                       name=`cat /proc/$process/status | grep Name`
                        name=${name/Name:}
                        name=`echo $name | tr -s " "`
                
