@@ -4,7 +4,7 @@
 ### Usage
 Note: root access is needed.
 
-	chmod 700 procvm.sh
+	chmod +x procvm.sh
 	sudo ./procvm.sh
 
 ## Example
