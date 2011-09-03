@@ -1,5 +1,5 @@
 # procvm
-**procvm** is a linux shell script that list VM size (from `/proc/<pid>`), PID and comand for each running process.
+**procvm** is a linux shell script that list VM RSS and VM Size (from `/proc/<pid>/status`), PID and comand for each running process.
 
 ### Usage
 Note: root access is needed.
@@ -8,16 +8,18 @@ Note: root access is needed.
 	sudo ./procvm.sh
 
 ## Example
-	1       23 MB           init (/sbin/init)
-	1009    5 MB            getty (/sbin/getty -8 38400 tty2)
-	10128   216 MB          apache2 (/usr/sbin/apache2 -k start)
-	1013    5 MB            getty (/sbin/getty -8 38400 tty6)
-	10154   216 MB          apache2 (/usr/sbin/apache2 -k start)
-	1016    33 MB           avahi-daemon (avahi-daemon: chroot helper)
-	10169   206 MB          apache2 (/usr/sbin/apache2 -k start)
-	1019    3 MB            acpid (acpid -c /etc/acpi/events -s /var/run/acpid.socket)
+	PID	VmRSS	VmSize		Name (Path)
+
+	1	1 MB	2 MB		init (/sbin/init)
+	1063	3 MB	18 MB		gdm-session-wor (/usr/lib/gdm/gdm-session-worker)
+	1070	3 MB	16 MB		upowerd (/usr/lib/upower/upowerd)
+	1074	1 MB	18 MB		rtkit-daemon (/usr/lib/rtkit/rtkit-daemon)
+	1354	1 MB	13 MB		winbindd (/usr/sbin/winbindd)
+	1385	1 MB	13 MB		winbindd (/usr/sbin/winbindd)
+	1448	0 MB	1 MB		getty (/sbin/getty -8 38400 tty1)
+
 
 ### Future Features
-* Filter by VM size.
-* Order by VM size.
+* Filter by VM RSS and VM Size.
+* Order by VM RSS and VM Size.
 * Units: KB, MB, GB, ...
