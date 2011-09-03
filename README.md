@@ -10,7 +10,6 @@ Note: root access is needed.
 ## Example
 	PID	VmRSS	VmSize		Name (Path)
 
-	1	1 MB	2 MB		init (/sbin/init)
 	1063	3 MB	18 MB		gdm-session-wor (/usr/lib/gdm/gdm-session-worker)
 	1070	3 MB	16 MB		upowerd (/usr/lib/upower/upowerd)
 	1074	1 MB	18 MB		rtkit-daemon (/usr/lib/rtkit/rtkit-daemon)
