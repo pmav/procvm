@@ -3,11 +3,16 @@
 # https://github.com/pmav/procvm
 #
 # http://pmav.eu
+#
+# v0.1.0 - Initial release (04/May/2011).
+# v0.2.0 - VM RSS added (03/Sep/2011).
 
+# Header
 echo -e "PID\tVmRSS\tVmSize\t\tName (Path)\n"
 
 for process in `ls -m /proc/ | cut --delimiter=',' --fields=1- | grep '^[0-9]' | tr -d ','`; do
 
+	# For each process in the system.
 	if [ -f /proc/$process/status ]; then
 
 		process_status=`cat /proc/$process/status`
