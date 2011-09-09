@@ -8,7 +8,7 @@ Note: root access is needed.
 	sudo ./procvm.sh
 
 ## Example
-	PID	VmRSS	VmSize		Name (Path)
+	PID		VmRSS	VmSize		Name (Path)
 
 	1063	3 MB	18 MB		gdm-session-wor (/usr/lib/gdm/gdm-session-worker)
 	1070	3 MB	16 MB		upowerd (/usr/lib/upower/upowerd)
